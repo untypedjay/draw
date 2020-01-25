@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef MINILIB_SHAPE_H
 #define MINILIB_SHAPE_H
 
