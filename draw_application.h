@@ -4,13 +4,12 @@
 #include "shape.h"
 
 struct draw_application final : ml5::application {
-    auto make_window() const -> std::unique_ptr<ml5::window> override {
-        return std::make_unique<window>(); // see class below
-    }
+    auto make_window() const -> std::unique_ptr<ml5::window> override;
 
 private:
     struct window final : ml5::window {
         window() : ml5::window{"ML5.Draw"} {} // constructor
+
     private:
         enum class shape_type { line, ellipse, rectangle };
         shape_type next_shape{shape_type::line}; // initial draw a line
